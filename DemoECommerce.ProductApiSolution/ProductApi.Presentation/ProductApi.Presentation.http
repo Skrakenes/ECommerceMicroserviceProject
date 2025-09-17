@@ -1,6 +1,19 @@
-@ProductApi.Presentation_HostAddress = http://localhost:5291
+@rootURL = http://localhost:5001
 
-GET {{ProductApi.Presentation_HostAddress}}/weatherforecast/
+GET {{rootURL}}/api/Products/
 Accept: application/json
 
 ###
+
+POST {{rootURL}}/api/Products/
+Content-Type: application/json
+{
+  "id": 0,
+  "name": "string",
+  "quantity": 3,
+  "price": 0
+}
+###
+Post {{rootURL}}/api/books
+Content-Type: application/json
+{
