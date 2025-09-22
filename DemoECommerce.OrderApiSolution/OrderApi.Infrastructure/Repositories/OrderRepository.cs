@@ -16,10 +16,10 @@ namespace OrderApi.Infrastructure.Repositories;
 public class OrderRepository(OrderDbContext context) : IOrder
 {
     public async Task<Response> CreateAsync(Order entity)
-    {
+     {
         try
         {
-            Order order = context.Orders.Add(entity).Entity;
+            var order = context.Orders.Add(entity).Entity;
             await context.SaveChangesAsync();
             return order.Id > 0 ? new Response(true, "Order placed successfully") :
                 new Response(false, "Error occurred while placing order");
@@ -78,7 +78,7 @@ public class OrderRepository(OrderDbContext context) : IOrder
     {
         try
         {
-            List<Order> orders = await context.Orders.AsNoTracking().ToListAsync();
+           var orders = await context.Orders.AsNoTracking().ToListAsync();
             return orders is not null ? orders : null!;
         }
         catch (Exception ex)

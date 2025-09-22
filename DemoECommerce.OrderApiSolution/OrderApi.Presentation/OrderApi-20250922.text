@@ -1,0 +1,22 @@
+2025-09-22 15:01:48.978 +02:00 [INF] Unable to resolve service for type 'OrderApi.Application.Services.IOrderService' while attempting to activate 'OrderApi.Presentation.Controllers.OrdersController'.
+2025-09-22 15:01:49.118 +02:00 [WRN] Unable to resolve service for type 'OrderApi.Application.Services.IOrderService' while attempting to activate 'OrderApi.Presentation.Controllers.OrdersController'.
+2025-09-22 15:06:22.390 +02:00 [INF] Invalid object name 'Orders'.
+2025-09-22 15:06:22.515 +02:00 [WRN] Invalid object name 'Orders'.
+2025-09-22 15:06:56.138 +02:00 [INF] Error occured while retrieving orders
+2025-09-22 15:06:56.142 +02:00 [WRN] Error occured while retrieving orders
+2025-09-22 15:08:08.179 +02:00 [INF] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-22 15:08:08.184 +02:00 [WRN] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-22 15:11:22.834 +02:00 [INF] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-22 15:11:22.894 +02:00 [WRN] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-22 15:12:14.826 +02:00 [INF] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-22 15:12:14.878 +02:00 [WRN] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-22 15:15:59.358 +02:00 [INF] Invalid object name 'Orders'.
+2025-09-22 15:15:59.513 +02:00 [WRN] Invalid object name 'Orders'.
+2025-09-22 15:18:28.659 +02:00 [INF] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-22 15:18:28.755 +02:00 [WRN] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-22 15:23:13.368 +02:00 [INF] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-22 15:23:13.405 +02:00 [WRN] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-22 15:24:25.224 +02:00 [INF] Invalid object name 'Orders'.
+2025-09-22 15:24:25.227 +02:00 [WRN] Invalid object name 'Orders'.
+2025-09-22 15:25:15.440 +02:00 [INF] Invalid object name 'Orders'.
+2025-09-22 15:25:15.493 +02:00 [WRN] Invalid object name 'Orders'.
