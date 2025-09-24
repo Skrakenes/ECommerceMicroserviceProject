@@ -23,7 +23,7 @@ public static class OrderConversion
         // Single order conversion
         if(order is not null || orders is null)
         {
-            OrderDTO singleOrder = new(
+            var singleOrder = new OrderDTO(
                 order!.Id,
                 order.ClientId,
                 order.ProductId,
@@ -36,13 +36,13 @@ public static class OrderConversion
         // Multiple orders conversion
         if (orders is not null || order is null)
         {
-            List<OrderDTO> _orders = [.. orders!.Select(o => 
+            var _orders =  orders!.Select(o => 
             new OrderDTO(
                 o.Id,
                 o.ClientId,
                 o.ProductId,
                 o.PurchaseQuantity,
-                o.OrderDate))];
+                o.OrderDate));
 
             return (null, _orders);
         }

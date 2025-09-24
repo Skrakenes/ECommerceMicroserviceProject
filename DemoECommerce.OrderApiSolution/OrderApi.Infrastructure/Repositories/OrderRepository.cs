@@ -19,7 +19,7 @@ public class OrderRepository(OrderDbContext context) : IOrder
      {
         try
         {
-            var order = context.Orders.Add(entity).Entity;
+            Order order = context.Orders.Add(entity).Entity;
             await context.SaveChangesAsync();
             return order.Id > 0 ? new Response(true, "Order placed successfully") :
                 new Response(false, "Error occurred while placing order");

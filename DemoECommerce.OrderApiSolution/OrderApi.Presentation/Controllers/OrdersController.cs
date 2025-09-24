@@ -61,7 +61,7 @@ namespace OrderApi.Presentation.Controllers
 
             // convert DTO to entity
            var getEntity = OrderConversion.ToEntity(orderDTO);
-            Response response = await orderInterface.CreateAsync(getEntity);
+            var response = await orderInterface.CreateAsync(getEntity);
             return response.Flag ? Ok(response) : BadRequest(response);
         }
 
