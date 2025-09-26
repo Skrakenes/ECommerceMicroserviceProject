@@ -22,7 +22,7 @@ public static class ProductConversion
         // return single
         if(product is not null || products is null)
         {
-            ProductDTO singleproduct = new ProductDTO
+            var singleproduct = new ProductDTO
                 (
                 product!.Id,
                 product.Name!,
@@ -35,7 +35,7 @@ public static class ProductConversion
         // return list
         if(products is not null || product is null)
         {
-            List<ProductDTO> _products = products!.Select(p =>
+            var _products = products!.Select(p =>
                 new ProductDTO(p.Id, p.Name!, p.Quantity, p.Price)).ToList();
             
             return (null, _products);

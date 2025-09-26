@@ -40,7 +40,7 @@ namespace OrderApi.Presentation.Controllers
         public async Task<ActionResult<OrderDTO>> GetClientOrders(int clientId)
         {
             if(clientId <= 0 ) return BadRequest("Invalid data provided");
-            IEnumerable<OrderDTO> orders = await orderService.GetOrdersByClientId(clientId);
+            var orders = await orderService.GetOrdersByClientId(clientId);
             return !orders.Any() ? NotFound(null) : Ok(orders);
         }
 
@@ -48,7 +48,7 @@ namespace OrderApi.Presentation.Controllers
         public async Task<ActionResult<OrderDetailsDTO>> GetOrderDetails(int orderId)
         {
             if(orderId <= 0 ) return BadRequest("Invalid data provided");
-            OrderDetailsDTO? orderDetail = await orderService.GetOrderDetails(orderId);
+            var orderDetail = await orderService.GetOrderDetails(orderId);
             return orderDetail.OrderId > 0 ? Ok(orderDetail) : NotFound(null);
         }
 

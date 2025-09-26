@@ -21,7 +21,7 @@ public class OrderService(IOrder orderInterface, HttpClient httpClient,
     {
         // Call Product Api using HttpClient
         // Redirect this call to the API Gateway since product Api does not respond to outsiders
-        HttpResponseMessage getProduct = await httpClient.GetAsync($"/api/products/{productId}");
+        var getProduct = await httpClient.GetAsync($"/api/product/{productId}");
         if (!getProduct.IsSuccessStatusCode)
             return null!;
 
@@ -34,7 +34,7 @@ public class OrderService(IOrder orderInterface, HttpClient httpClient,
     {
         // Call Product Api using HttpClient
         // Redirect this call to the API Gateway since product Api does not respond to outsiders
-        HttpResponseMessage getUser = await httpClient.GetAsync($"/api/products/{userId}");
+        var getUser = await httpClient.GetAsync($"http://localhost:5000/api/Authentication/{userId}");
         if (!getUser.IsSuccessStatusCode)
             return null!;
 
@@ -46,12 +46,12 @@ public class OrderService(IOrder orderInterface, HttpClient httpClient,
     public async Task<OrderDetailsDTO> GetOrderDetails(int orderId)
     {
         // Prepare Order 
-        Order? order = await orderInterface.FindByIdAsync(orderId);
+        var order = await orderInterface.FindByIdAsync(orderId);
         if (order is null || order!.Id <= 0)
             return null!;
 
         // Get retry pipeline
-        ResiliencePipeline retryPipeline = resiliencePipeline.GetPipeline("my-retry-pipeline");
+        var retryPipeline = resiliencePipeline.GetPipeline("my-retry-pipeline");
 
         // Prepare Product
         var productDTO = await retryPipeline.ExecuteAsync(async token => await GetProduct(order.ProductId));
