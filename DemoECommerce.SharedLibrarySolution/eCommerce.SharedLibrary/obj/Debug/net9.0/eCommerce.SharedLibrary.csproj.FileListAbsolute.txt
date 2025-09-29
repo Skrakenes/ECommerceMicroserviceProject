@@ -36,3 +36,16 @@ C:\Users\Krist\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce
 C:\Users\Krist\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\refint\eCommerce.SharedLibrary.dll
 C:\Users\Krist\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\eCommerce.SharedLibrary.pdb
 C:\Users\Krist\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\ref\eCommerce.SharedLibrary.dll
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\bin\Debug\net9.0\eCommerce.SharedLibrary.deps.json
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\bin\Debug\net9.0\eCommerce.SharedLibrary.dll
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\bin\Debug\net9.0\eCommerce.SharedLibrary.pdb
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\eCommerce.SharedLibrary.csproj.AssemblyReference.cache
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\eCommerce.SharedLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\eCommerce.SharedLibrary.AssemblyInfoInputs.cache
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\eCommerce.SharedLibrary.AssemblyInfo.cs
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\eCommerce.SharedLibrary.csproj.CoreCompileInputs.cache
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\eCommerce.SharedLibrary.sourcelink.json
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\eCommerce.SharedLibrary.dll
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\refint\eCommerce.SharedLibrary.dll
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\eCommerce.SharedLibrary.pdb
+C:\Users\08krikra\source\repos\Skrakenes\ECommerceMicroserviceProject\DemoECommerce.SharedLibrarySolution\eCommerce.SharedLibrary\obj\Debug\net9.0\ref\eCommerce.SharedLibrary.dll
