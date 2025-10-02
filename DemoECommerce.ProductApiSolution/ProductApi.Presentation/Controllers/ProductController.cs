@@ -1,4 +1,5 @@
 ﻿using Azure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductApi.Application.DTOs;
@@ -10,13 +11,14 @@ namespace ProductApi.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class ProductController(IProduct productInterface) : ControllerBase
     {
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProducts()
         {
             // Get all products from repo
-            IEnumerable<Product> products = await productInterface.GetAllAsync();
+            var products = await productInterface.GetAllAsync();
             if(!products.Any())
                 return NotFound("No products found.");
 
@@ -29,7 +31,7 @@ namespace ProductApi.Presentation.Controllers
         public async Task<ActionResult<ProductDTO>> GetProduct(int id)
         {
             // Get single product from the repo
-            Product product = await productInterface.FindByIdAsync(id);
+            var product = await productInterface.FindByIdAsync(id);
             if(product is null)
                 return NotFound("Product requested not found");
 
@@ -39,6 +41,7 @@ namespace ProductApi.Presentation.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles ="Admin")]
         public async Task<ActionResult<Response>> CreateProduct(ProductDTO product)
         {
             // check model state is all data annotations are valid
@@ -46,12 +49,13 @@ namespace ProductApi.Presentation.Controllers
                 return BadRequest(ModelState);
 
             // convert to entity
-            Product getEntity = ProductConversion.ToEntity(product);
+            var getEntity = ProductConversion.ToEntity(product);
             var response = await productInterface.CreateAsync(getEntity);
             return response.Flag is true ? Ok(response) : BadRequest(response);
         }
 
         [HttpPut]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Response>> UpdateProduct(ProductDTO product)
         {
             // check model state is all data annotations are valid
@@ -59,16 +63,17 @@ namespace ProductApi.Presentation.Controllers
                 return BadRequest(ModelState);
 
             // convert to entity
-            Product getEntity = ProductConversion.ToEntity(product);
+            var getEntity = ProductConversion.ToEntity(product);
             var response = await productInterface.UpdateAsync(getEntity);
             return response.Flag is true ? Ok(response) : BadRequest(response);
         }
 
         [HttpDelete]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Response>> DeleteProduct(ProductDTO product)
         {
             // convert to entity
-            Product getEntity = ProductConversion.ToEntity(product);
+            var getEntity = ProductConversion.ToEntity(product);
             var response = await productInterface.DeleteAsync(getEntity);
             return response.Flag is true ? Ok(response) : BadRequest(response);
         }

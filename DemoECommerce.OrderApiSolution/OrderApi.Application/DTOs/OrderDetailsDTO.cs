@@ -11,7 +11,7 @@ public record OrderDetailsDTO
 (
     [Required] int OrderId,
     [Required] int ProductId,
-    [Required] int Client,
+    [Required] int ClientId,
     [Required] string Name,
     [Required, EmailAddress] string Email,
     [Required] string Address,

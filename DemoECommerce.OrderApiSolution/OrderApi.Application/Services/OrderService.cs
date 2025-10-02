@@ -25,7 +25,7 @@ public class OrderService(IOrder orderInterface, HttpClient httpClient,
         if (!getProduct.IsSuccessStatusCode)
             return null!;
 
-        ProductDTO? product = await getProduct.Content.ReadFromJsonAsync<ProductDTO>();
+        var product = await getProduct.Content.ReadFromJsonAsync<ProductDTO>();
         return product!;
     }
 
@@ -34,7 +34,7 @@ public class OrderService(IOrder orderInterface, HttpClient httpClient,
     {
         // Call Product Api using HttpClient
         // Redirect this call to the API Gateway since product Api does not respond to outsiders
-        var getUser = await httpClient.GetAsync($"http://localhost:5000/api/Authentication/{userId}");
+        var getUser = await httpClient.GetAsync($"/api/Authentication/{userId}");
         if (!getUser.IsSuccessStatusCode)
             return null!;
 

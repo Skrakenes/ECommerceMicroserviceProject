@@ -41,7 +41,7 @@ public static class SharedServiceContainer
         app.UseMiddleware<GlobalException>();
 
         // Register middleware to block all oustsiders API calls
-        //app.UseMiddleware<ListenToOnlyApiGateway>();
+        app.UseMiddleware<ListenToOnlyApiGateway>();
 
         return app;
     }
